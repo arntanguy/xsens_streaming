@@ -24,8 +24,8 @@
   OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include <xsens/xstimestamp.h>
 #include <xsens_streaming/datagram.h>
+#include <xstypes/xstimestamp.h>
 
 /*! \class Datagram
 

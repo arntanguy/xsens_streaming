@@ -25,9 +25,9 @@
 */
 
 #include <boost/program_options.hpp>
-#include <xsens/xstime.h>
 #include <xsens_streaming/streamer.h>
 #include <xsens_streaming/udpserver.h>
+#include <xstypes/xstime.h>
 namespace po = boost::program_options;
 
 int main(int argc, char * argv[])

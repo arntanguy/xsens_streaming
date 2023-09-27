@@ -31,7 +31,7 @@
 #include <memory>
 #include <sstream>
 
-#include <xsens/xsbytearray.h>
+#include <xstypes/xsbytearray.h>
 
 class Streamer
 {

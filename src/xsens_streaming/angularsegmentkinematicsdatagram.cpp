@@ -24,8 +24,8 @@
   OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include <xsens/xsmath.h>
 #include <xsens_streaming/angularsegmentkinematicsdatagram.h>
+#include <xstypes/xsmath.h>
 
 /*! \class AngularSegmentKinematicsDatagram
   \brief a Angular Kinematics datagram (type 0x22)
