@@ -24,9 +24,9 @@
   OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include <xsens/xseuler.h>
-#include <xsens/xsquaternion.h>
 #include <xsens_streaming/eulerdatagram.h>
+#include <xstypes/xseuler.h>
+#include <xstypes/xsquaternion.h>
 
 /*! \class EulerDatagram
   \brief a Position & Euler orientation pose datagram (type 01)

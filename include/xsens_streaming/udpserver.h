@@ -32,8 +32,6 @@
 #include <mutex>
 #include <thread>
 
-#include <xsens/xssocket.h>
-#include <xsens/xsthread.h>
 #include <xsens_streaming/angularsegmentkinematicsdatagram.h>
 #include <xsens_streaming/centerofmassdatagram.h>
 #include <xsens_streaming/eulerdatagram.h>
@@ -46,6 +44,8 @@
 #include <xsens_streaming/streamer.h>
 #include <xsens_streaming/timecodedatagram.h>
 #include <xsens_streaming/trackerkinematicsdatagram.h>
+#include <xstypes/xssocket.h>
+#include <xstypes/xsthread.h>
 
 struct Datagram;
 
