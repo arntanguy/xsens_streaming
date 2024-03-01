@@ -20,6 +20,9 @@ add_project_dependency(Threads REQUIRED)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/CMakeModules)
 find_package(mtsdk REQUIRED COMPONENTS xstypes)
+if(NOT ${mtsdk_FOUND})
+  message(FATAL_ERROR "MTSDK not found. Please install it manually according to the instructions provided in the README: https://github.com/arntanguy/xsens_streaming")
+endif()
 
 add_subdirectory(src)
 add_subdirectory(CMakeModules)

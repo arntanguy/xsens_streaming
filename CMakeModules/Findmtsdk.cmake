@@ -36,7 +36,7 @@ if(NOT TARGET ${MTSDK})
     )
 
   include(FindPackageHandleStandardArgs)
-  find_package_handle_standard_args(MTSDK DEFAULT_MSG MTSDK_LIBRARY MTSDK_INCLUDE_DIR)
+  find_package_handle_standard_args(mtsdk DEFAULT_MSG MTSDK_LIBRARY MTSDK_INCLUDE_DIR)
   mark_as_advanced(MTSDK_INCLUDE_DIR MTSDK_LIBRARY)
   if(MTSDK_FOUND)
     add_library(${MTSDK} INTERFACE IMPORTED GLOBAL)
