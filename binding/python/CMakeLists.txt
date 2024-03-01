@@ -18,4 +18,3 @@ add_cython_bindings(xsens_streaming
   PRIVATE_SOURCES
     xsens_streaming/xsens_streaming.pyx
 )
-

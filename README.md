@@ -23,8 +23,8 @@ cmake ..
 make -j8
 sudo -E make install
 ```
-Replace `cmake ..` with `cmake --DPYTHON_BINDING=OFF ..` to compile without Python bindings. 
-For Anaconda users, `cmake ..` must be replaced with `cmake -DPYTHON_BINDING_USER_INSTALL=ON ..`.  
+Replace `cmake ..` with `cmake --DPYTHON_BINDING=OFF ..` to compile without Python bindings.
+For Anaconda users, `cmake ..` must be replaced with `cmake -DPYTHON_BINDING_USER_INSTALL=ON ..`.
 
 ## Testing
 

@@ -6,7 +6,7 @@ cdef class UdpServer(object):
     def __cinit__(self, address: str = "localhost", port: int = 9763):
         self.impl = new c_xsens_streaming.UdpServer(address.encode(), port)
 
-    def __dealloc__(self): 
+    def __dealloc__(self):
         del self.impl
 
     def printDatagrams(self, enable_print: bool):
@@ -15,7 +15,7 @@ cdef class UdpServer(object):
     def quaternions(self):
         return self.impl.quaternions()
 
-    def jointAngles(self): 
+    def jointAngles(self):
         return self.impl.jointAngles()
 
     def virtualMarkerPositions(self):
@@ -77,6 +77,3 @@ cdef class UdpServer(object):
 
     def waitComData(self):
         return self.impl.waitComData()
-
-    
-

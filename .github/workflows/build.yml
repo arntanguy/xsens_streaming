@@ -13,18 +13,6 @@ on:
 
 jobs:
 
-  clang-format:
-    runs-on: ubuntu-20.04
-    steps:
-    - uses: actions/checkout@v2
-    - name: Install clang-format-10
-      run: |
-        sudo apt-get -qq update
-        sudo apt-get -qq install clang-format-10
-    - name: Run clang-format-check
-      run: |
-        ./.clang-format-check.sh
-
   build:
     strategy:
       fail-fast: false
@@ -37,7 +25,7 @@ jobs:
     - uses: actions/checkout@v2
       with:
         submodules: recursive
-    - name: Install MT dependencies 
+    - name: Install MT dependencies
       shell: bash
       run: |
         set -x
@@ -60,7 +48,7 @@ jobs:
         macos: |
           brew-taps: mc-rtc/mc-rtc
           brew: mc_rtc
-          pip: Cython 
+          pip: Cython
         windows: |
           vcpkg:
             repo: microsoft/vcpkg
@@ -69,7 +57,7 @@ jobs:
             registries:
             - repo: mc-rtc/vcpkg-registry
               packages: [ spacevecalg, rbdyn, eigen-qld, sch-core, tasks, mc-rbdyn-urdf, mc-rtc-data, eigen-quadprog, state-observation, hpp-spline, mc-rtc ]
-          pip: Cython 
+          pip: Cython
     - name: Build and test
       uses: jrl-umi3218/github-actions/build-cmake-project@master
       with:

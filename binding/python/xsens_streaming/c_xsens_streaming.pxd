@@ -3,16 +3,16 @@ from libcpp cimport bool as cppbool
 from libcpp.vector cimport vector
 
 
-cdef extern from "<xsens_streaming/jointanglesdatagram.h>": 
-    cdef struct JointAngles "JointAnglesDatagram::Joint": 
+cdef extern from "<xsens_streaming/jointanglesdatagram.h>":
+    cdef struct JointAngles "JointAnglesDatagram::Joint":
         unsigned int parent
-        unsigned int child 
+        unsigned int child
         float rotation[3]
 
 cdef extern from "<xsens_streaming/quaterniondatagram.h>":
     cdef struct QuatKinematics "QuaternionDatagram::Kinematics":
         int segmentId
-        float position[3] 
+        float position[3]
         float orientation[4]
 
 cdef extern from "<xsens_streaming/eulerdatagram.h>":
@@ -62,14 +62,14 @@ cdef extern from "<xsens_streaming/scaledatagram.h>" namespace "ScaleDatagram":
         string segmentName
         float pos[3]
 
-cdef extern from "<xsens_streaming/timecodedatagram.h>" namespace "TimeCodeDatagram": 
+cdef extern from "<xsens_streaming/timecodedatagram.h>" namespace "TimeCodeDatagram":
     cdef struct TimeCode:
         long int nano
         signed char hour
         signed char minute
         signed char second
 
-cdef extern from "<xsens_streaming/centerofmassdatagram.h>": 
+cdef extern from "<xsens_streaming/centerofmassdatagram.h>":
     cdef struct CoMKinematics "CenterOfMassDatagram::Kinematics":
         float pos[3]
         float vel[3]
