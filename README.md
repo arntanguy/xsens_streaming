@@ -10,7 +10,7 @@ This package provides an API to read XSens tracking and sensor data provided by 
 tar xzvf MT_Software_Suite_linux-x64_2022.0_b7085_r119802.tar.gz
 cd MT_Software_Suite_linux-x64_2022.0
 sudo ./mtsdk_linux-x64_2022.0.sh
-``
+```
 
 And follow the instructions.
 
