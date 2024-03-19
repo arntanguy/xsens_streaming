@@ -6,7 +6,7 @@ set(PROJECT_URL https://github.com/arntanguy/xsens_streaming)
 set(PROJECT_DEBUG_POSTFIX "_d")
 set(PROJECT_USE_CMAKE_EXPORT TRUE)
 set(CXX_DISABLE_WERROR 1)
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 
 include(cmake/base.cmake)
 include(cmake/cython/cython.cmake)
