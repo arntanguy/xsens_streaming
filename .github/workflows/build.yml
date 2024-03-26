@@ -17,9 +17,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-18.04, ubuntu-20.04, ubuntu-22.04] # [macos-latest, windows-latest]
+        os: [ubuntu-20.04, ubuntu-22.04] # [macos-latest, windows-latest]
         build-type: [RelWithDebInfo]
-        compiler: [gcc]
+        compiler: [gcc, clang]
     runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v2
