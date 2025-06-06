@@ -11,28 +11,28 @@
 set(MTSDK mtsdk::mtsdk)
 if(NOT TARGET ${MTSDK})
   if(NOT DEFINED MTSDK_PREFIX)
-    set(MTSDK_PREFIX ${CMAKE_INSTALL_PREFIX})
+    set(MTSDK_PREFIX ${CMAKE_INSTALL_PREFIX}/mtsdk)
   endif()
+  message(STATUS "MTSDK_PREFIX=${MTSDK_PREFIX}")
 
   find_path(MTSDK_INCLUDE_DIR
     NAMES xstypes.h
-    HINTS ${MTSDK_PREFIX}
-    PATHS /usr/local
-    PATH_SUFFIXES xsens/include
+    PATHS ${MTSDK_PREFIX} /usr/local
+    PATH_SUFFIXES include
+    REQUIRED
     )
 
   find_path(MTSDK_LIBRARY_DIR
     NAMES libxstypes.so
-    HINTS ${MTSDK_PREFIX}
-    PATHS /usr/local
-    PATH_SUFFIXES xsens/lib
+    PATHS ${MTSDK_PREFIX} /usr/local
+    PATH_SUFFIXES lib
+    REQUIRED
     )
 
   find_library(MTSDK_LIBRARY
     NAMES "xstypes"
-    PATHS ${MTSDK_PREFIX}
-    PATHS /usr/local
-    PATH_SUFFIXES xsens/lib
+    PATHS ${MTSDK_LIBRARY_DIR}
+    REQUIRED
     )
 
   include(FindPackageHandleStandardArgs)
@@ -44,5 +44,8 @@ if(NOT TARGET ${MTSDK})
       INTERFACE_INCLUDE_DIRECTORIES "${MTSDK_INCLUDE_DIR}"
       INTERFACE_LINK_LIBRARIES ${MTSDK_LIBRARY}
       )
+    message(STATUS "MTSDK_INCLUDE_DIR: ${MTSDK_INCLUDE_DIR}")
+    message(STATUS "MTSDK_LIBRARY: ${MTSDK_LIBRARY}")
+    message(STATUS "MTSDK_LIBRARY_DIR: ${MTSDK_LIBRARY_DIR}")
   endif()
 endif()
